@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboVITics Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>RoboVITics</h1>
+
+        <form id="registrationForm" onsubmit="displayDetails(event)">
+            <div class="form-row">
+                <input type="text" id="name" placeholder="Name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <label class="size">Age</label>
+                <div class="flex">
+                    <input type="range" id="ageSlider" name="ageSlider" min="0" max="100" value="20" required>
+                    <input type="text" id="ageInput" name="ageInput" class="age-input" value="20">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label class="size">Gender</label><br>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label class="size">Domain:</label><br>
+                <input type="checkbox" id="electrical" name="domain" value="electrical">
+                <label for="electrical">Electrical</label><br>
+                <input type="checkbox" id="mechanical" name="domain" value="mechanical">
+                <label for="mechanical">Mechanical</label><br>
+                <input type="checkbox" id="webdev" name="domain" value="webdev">
+                <label for="webdev">Web Development</label>
+            </div>
+
+            <div class="form-row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <div class="details" id="detailsContainer" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
